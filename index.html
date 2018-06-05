@@ -1,45 +1,62 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
 
-</head>
-<style >
-	body {
-	background-color: gainsboro;
-	font-family: sans-serif;
-	
-	
+<style>
+
+h3 {background-color: red;}
+
+.class-selector{
+	background-color: pink;
 }
 
-div{
-	width: 500px;
-	margin:auto;
-}
-
-.class1 {
-	border: solid;
-	border-color: white;
-	padding: 10px;
-	text-align: center;
-
+h4 {
+	background-color: yellow;
 }
 </style>
+
+</head>
+
 <body>
 <div>
-<h1>My First Website</h1>
-Welcome to my website!Here are some things i enjoy.<br>
+<h1>CSS specificity</h1>
+demo of specificity and rules <br>
 <ul>
-	<li> Web Developement</li>
-	<li> GIT SESSION </li>
-	<li> Chess</li>
-	<li> Cricket </li>
+	<li> 
+		 <h2>
+		 	latest rule count
+		 </h2>
+	</li>
+	<li>
+	 	<h3>
+	 		within html inline style is specific than CSS 
+	 	</h3>
+	</li>
+	<li>
+		<h4 class="class-selector">
+	 		class selector is specific than element selector 
+	 	</h4>
+	</li>
+	<li> 
+		<div id="id-selector">
+			id selector have higher specificity than attribute selector
+		</div>
+	 </li>
+	 <li class="inherit">
+	 	<h5>
+	 		directly targeted element will always take precedence over inherited styles 
+	 	</h5>
+	</li>
 	
-	<li> Learning</li><br>
+	
 
 </ul>
-<h3>Favourite Quotes</h3>
-	<p class="class1" >Here is a favorite quote of mine...</p>
-	<p class="class1">...and another</p>
+Specificity calculations
+	<p  >1.  1000 for style attribute</p>
+	<p > 2.  100 for id</p>
+	<p > 3.  10 for class attribute</p>
+	<p > 4.  1 for each element</p>
 </p>
 <div>
 </body>
